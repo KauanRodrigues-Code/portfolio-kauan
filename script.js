@@ -1,58 +1,24 @@
-gsap.registerPlugin(ScrollTrigger);
-
-/* Scroll Reveal */
-gsap.utils.toArray(".reveal").forEach((el)=>{
-  gsap.to(el,{
-    scrollTrigger:{
-      trigger:el,
-      start:"top 85%"
-    },
-    y:0,
-    opacity:1,
-    duration:1.2,
-    ease:"power3.out"
-  });
+// Animação entrada texto
+gsap.from(".hero-content", {
+  opacity: 0,
+  y: 80,
+  duration: 1.5,
+  ease: "power4.out"
 });
 
-/* Parallax nas imagens */
-gsap.utils.toArray(".watch").forEach((img)=>{
-  gsap.to(img,{
-    scrollTrigger:{
-      trigger:img,
-      start:"top bottom",
-      end:"bottom top",
-      scrub:true
-    },
-    y:-120,
-    scale:1.1,
-    rotate:5
-  });
+// Relógio principal
+gsap.from(".watch-main", {
+  opacity: 0,
+  x: 100,
+  duration: 1.5,
+  ease: "power4.out"
 });
 
-/* Counter Animation */
-const counters=document.querySelectorAll(".counter");
-
-counters.forEach(counter=>{
-  ScrollTrigger.create({
-    trigger:counter,
-    start:"top 85%",
-    onEnter:()=>animateCounter(counter)
-  });
+// Relógio secundário
+gsap.from(".watch-side", {
+  opacity: 0,
+  x: -100,
+  duration: 1.5,
+  delay: 0.3,
+  ease: "power4.out"
 });
-
-function animateCounter(counter){
-  const target=parseFloat(counter.getAttribute("data-target"));
-  let count=0;
-  const increment=target/60;
-
-  function update(){
-    count+=increment;
-    if(count<target){
-      counter.innerText=count.toFixed(1);
-      requestAnimationFrame(update);
-    }else{
-      counter.innerText=target;
-    }
-  }
-  update();
-}
