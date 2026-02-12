@@ -2,43 +2,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background: #0f0f0f;
   color: white;
   overflow-x: hidden;
+  background: linear-gradient(-45deg, #0f0f0f, #111827, #0f172a, #000);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px;
-}
-
-.hero {
-  background: linear-gradient(180deg, #0f0f0f, #111827);
-}
-
-.product {
-  background: #111827;
-}
-
-.features {
-  background: #0f172a;
-}
-
-.cta {
-  background: #000;
+  padding: 60px 20px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
 }
 
@@ -48,21 +40,29 @@ h2 {
 }
 
 p {
-  max-width: 600px;
-  opacity: 0.8;
+  max-width: 700px;
+  opacity: 0.85;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #3b82f6;
+  font-weight: bold;
 }
 
 .watch {
-  width: 300px;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  width: 320px;
+  border-radius: 30px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  margin-top: 40px;
 }
 
-button {
-  margin-top: 20px;
-  padding: 15px 40px;
-  border: none;
+.cta button {
+  margin-top: 30px;
+  padding: 18px 50px;
   border-radius: 50px;
+  border: none;
   background: #2563eb;
   color: white;
   font-size: 1rem;
@@ -70,7 +70,7 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+.cta button:hover {
   background: #1d4ed8;
   transform: scale(1.05);
 }
