@@ -1,19 +1,15 @@
-gsap.from(".hero-text", { y: 50, opacity: 0, duration: 1 });
-gsap.from(".hero-image", { scale: 0.9, opacity: 0, delay: 0.3 });
+gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".feature", {
-  scrollTrigger: ".features",
-  y: 30,
-  opacity: 0,
-  stagger: 0.15
+gsap.utils.toArray(".reveal").forEach((el) => {
+  gsap.to(el, {
+    scrollTrigger: {
+      trigger: el,
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
+    ease: "power3.out"
+  });
 });
-
-// THEME TOGGLE
-const toggle = document.getElementById("themeToggle");
-const html = document.documentElement;
-
-toggle.onclick = () => {
-  const theme = html.getAttribute("data-theme");
-  html.setAttribute("data-theme", theme === "dark" ? "light" : "dark");
-  toggle.textContent = theme === "dark" ? "🌙" : "☀️";
-};
