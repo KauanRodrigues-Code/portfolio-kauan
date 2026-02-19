@@ -1,93 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kauan Rodrigues | Desenvolvedor Web</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauan Rodrigues | Dev</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="logo">KR</div>
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-  </nav>
-</header>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Kauan.dev</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Kauan Rodrigues</h1>
-    <h2>Desenvolvedor Web Front-End</h2>
-    <p>Crio experiências digitais modernas, responsivas e estratégicas que ajudam negócios a crescer online.</p>
-    <div class="buttons">
-      <a href="#projetos" class="btn primary">Ver Projetos</a>
-      <a href="#contato" class="btn secondary">Solicitar Orçamento</a>
-    </div>
-  </div>
-</section>
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <h1>Olá, eu sou <span>Kauan Rodrigues</span></h1>
+            <p id="typing"></p>
+            <a href="#projetos" class="btn">Ver Projetos</a>
+        </div>
+    </section>
 
-<section id="sobre" class="section reveal">
-  <h2>Sobre Mim</h2>
-  <p>
-    Desenvolvedor focado em criar interfaces modernas, organizadas e com alto impacto visual.
-    Trabalho com HTML, CSS e JavaScript desenvolvendo soluções que unem design, performance e estratégia.
-  </p>
-</section>
+    <!-- SOBRE -->
+    <section id="sobre" class="reveal">
+        <h2>Sobre Mim</h2>
+        <p style="text-align:center; max-width:800px; margin:auto; opacity:0.8;">
+            Desenvolvedor focado em criar sites modernos, rápidos e estratégicos.
+            Meu objetivo é transformar ideias em experiências digitais que realmente vendem.
+        </p>
+    </section>
 
-<section id="projetos" class="section reveal">
-  <h2>Projetos</h2>
+    <!-- TECNOLOGIAS -->
+    <section id="tecnologias">
+        <h2>Tecnologias</h2>
+        <div class="cards">
+            <div class="card reveal">
+                <h3>HTML5</h3>
+                <p>Estrutura moderna e semântica.</p>
+            </div>
 
-  <div class="cards">
+            <div class="card reveal">
+                <h3>CSS3</h3>
+                <p>Design responsivo e animações avançadas.</p>
+            </div>
 
-    <div class="card">
-      <h3>Smartwatch Concept</h3>
-      <p>Página comparativa moderna para apresentação estratégica de produto.</p>
-      <div class="card-buttons">
-        <a href="#">Ver Projeto</a>
-        <a href="#">Código</a>
-      </div>
-    </div>
+            <div class="card reveal">
+                <h3>JavaScript</h3>
+                <p>Interatividade e funcionalidades dinâmicas.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>Sistema Web - Lanchonete</h3>
-      <p>Aplicação com carrinho, finalização de pedidos e controle automático de funcionamento.</p>
-      <div class="card-buttons">
-        <a href="#">Ver Projeto</a>
-        <a href="#">Código</a>
-      </div>
-    </div>
+    <!-- PROJETOS -->
+    <section id="projetos">
+        <h2>Projetos</h2>
 
-  </div>
-</section>
+        <div class="cards">
 
-<section id="servicos" class="section reveal">
-  <h2>Serviços</h2>
-  <ul>
-    <li>Landing Pages estratégicas</li>
-    <li>Sites institucionais</li>
-    <li>Portfólios profissionais</li>
-    <li>Estrutura para e-commerce</li>
-    <li>Sistemas web personalizados</li>
-  </ul>
-</section>
+            <div class="card reveal">
+                <h3>Página Relógio Tech</h3>
+                <p>
+                    Página comparativa estratégica apresentando um smartwatch moderno,
+                    destacando diferenciais e comparação com modelo da Apple.
+                </p>
+            </div>
 
-<section id="contato" class="section reveal">
-  <h2>Vamos criar algo profissional?</h2>
-  <p>Seu negócio merece uma presença digital moderna.</p>
-  <a href="#" class="btn primary large">Falar no WhatsApp</a>
-</section>
+            <div class="card reveal">
+                <h3>Sistema Lanchonete</h3>
+                <p>
+                    Site completo para lanchonete com carrinho dinâmico,
+                    fechamento automático de pedidos e sistema funcional de finalização.
+                </p>
+            </div>
 
-<footer>
-  <p>© 2026 Kauan Rodrigues - Desenvolvedor Web</p>
-</footer>
+        </div>
+    </section>
 
-<a href="#" class="whatsapp">💬</a>
+    <!-- CONTATO -->
+    <section id="contato" class="reveal">
+        <h2>Vamos Trabalhar Juntos?</h2>
+        <p style="text-align:center; opacity:0.8; margin-bottom:30px;">
+            Estou disponível para novos projetos e oportunidades.
+        </p>
+        <div style="text-align:center;">
+            <a href="https://wa.me/55988230563" target="_blank" class="btn">
+                Falar no WhatsApp
+            </a>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Kauan Rodrigues - Todos os direitos reservados.
+    </footer>
+
+    <!-- BOTÃO WHATSAPP FIXO -->
+    <a href="https://wa.me/55988230563" target="_blank" class="whatsapp">
+        W
+    </a>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
 </body>
 </html>
