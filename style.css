@@ -5,33 +5,50 @@
   font-family: 'Inter', sans-serif;
 }
 
-body {
-  background: #0f0f0f;
-  color: white;
+html {
   scroll-behavior: smooth;
 }
+
+body {
+  background: radial-gradient(circle at top left, #111 0%, #0f0f0f 40%, #0a0a0a 100%);
+  color: white;
+}
+
+/* HEADER */
 
 header {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(15,15,15,0.9);
+  background: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 50px;
   z-index: 1000;
+  border-bottom: 1px solid rgba(0,191,255,0.1);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: #00bfff;
 }
 
 nav a {
   color: white;
-  margin-left: 20px;
+  margin-left: 25px;
   text-decoration: none;
   transition: 0.3s;
+  font-weight: 400;
 }
 
 nav a:hover {
   color: #00bfff;
 }
+
+/* HERO */
 
 .hero {
   height: 100vh;
@@ -40,10 +57,24 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   padding: 0 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 191, 255, 0.15);
+  filter: blur(140px);
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   background: linear-gradient(90deg, #00bfff, #0066ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -52,18 +83,29 @@ nav a:hover {
 .hero h2 {
   margin: 15px 0;
   font-weight: 400;
+  color: #ccc;
 }
 
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #aaa;
+}
+
+/* BOTÕES */
+
 .buttons {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .btn {
-  padding: 12px 25px;
+  padding: 12px 28px;
   border-radius: 30px;
   text-decoration: none;
-  margin: 5px;
-  transition: 0.3s;
+  margin: 8px;
+  transition: 0.3s ease;
+  display: inline-block;
+  font-weight: 500;
 }
 
 .primary {
@@ -72,7 +114,8 @@ nav a:hover {
 }
 
 .primary:hover {
-  box-shadow: 0 0 20px #00bfff;
+  box-shadow: 0 0 25px #00bfff;
+  transform: translateY(-3px);
 }
 
 .secondary {
@@ -85,10 +128,30 @@ nav a:hover {
   color: black;
 }
 
+.large {
+  padding: 15px 35px;
+  font-size: 16px;
+}
+
+/* SEÇÕES EM BLOCO */
+
 .section {
   padding: 120px 50px;
+  max-width: 1100px;
+  margin: 100px auto;
   text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 191, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
 }
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* CARDS */
 
 .cards {
   display: flex;
@@ -99,24 +162,41 @@ nav a:hover {
 }
 
 .card {
-  background: #1a1a1a;
+  background: rgba(255, 255, 255, 0.04);
   padding: 30px;
   width: 300px;
-  border-radius: 15px;
-  transition: 0.4s;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 191, 255, 0.15);
+  transition: 0.4s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px rgba(0,191,255,0.4);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0,191,255,0.4);
+}
+
+.card p {
+  color: #bbb;
+  margin-top: 10px;
+}
+
+.card-buttons {
+  margin-top: 15px;
 }
 
 .card-buttons a {
   display: inline-block;
-  margin: 10px 5px;
+  margin: 6px;
   color: #00bfff;
   text-decoration: none;
+  font-size: 14px;
 }
+
+.card-buttons a:hover {
+  text-decoration: underline;
+}
+
+/* LISTA SERVIÇOS */
 
 ul {
   list-style: none;
@@ -125,22 +205,70 @@ ul {
 
 ul li {
   margin: 10px 0;
+  color: #ccc;
 }
+
+/* FOOTER */
 
 footer {
   text-align: center;
   padding: 30px;
   background: #111;
+  margin-top: 60px;
+  border-top: 1px solid rgba(0,191,255,0.1);
 }
+
+/* WHATSAPP */
 
 .whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #00bfff;
-  padding: 15px;
+  padding: 16px;
   border-radius: 50%;
   color: black;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00bfff;
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(0.98);
+  transition: 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  nav a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    padding: 80px 20px;
+    margin: 60px 15px;
+  }
 }
