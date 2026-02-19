@@ -3,109 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kauan | Portfolio</title>
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <title>Kauan Rodrigues | Desenvolvedor Web</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Olá, eu sou <span class="highlight">Kauan</span></h1>
-      <p>Desenvolvedor focado em criar experiências modernas e impactantes.</p>
-      <a href="#projects" class="btn">Ver Projetos</a>
-    </div>
-  </section>
+<header>
+  <div class="logo">KR</div>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
 
-  <!-- SOBRE -->
-  <section class="about reveal">
-    <h2>Sobre Mim</h2>
-    <p>
-      Meu foco é criar experiências modernas, responsivas e com animações suaves
-      utilizando HTML, CSS, JavaScript, GSAP e UI/UX.
-    </p>
-  </section>
-
-  <!-- PROJETOS -->
-  <section id="projects" class="reveal">
-    <h2>Projetos</h2>
-
-    <div class="project-grid">
-      
-      <div class="project-card">
-        <h3>Smartwatch Store</h3>
-        <p>Foco em UX e animações suaves.</p>
-        <a href="https://kauanrodrigues-code.github.io/Relogio/" 
-           class="btn" 
-           target="_blank">
-          Acessar Projeto
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>LC Burges Lanches</h3>
-        <p>Sistema moderno de pedidos online com horário inteligente.</p>
-        <a href="http://lcburges.com.br/" 
-           class="btn" 
-           target="_blank">
-          Acessar Projeto
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>Projeto Futuro</h3>
-        <p>Espaço reservado para seu próximo grande projeto.</p>
-      </div>
-
-    </div>
-  </section>
-
-<!-- REDES -->
-<section class="reveal">
-  <h2>Redes</h2>
-
-  <div class="social-grid">
-    
-    <div class="social-card">
-      <h3>GitHub</h3>
-      <a href="https://github.com/kauanrodrigues-code" target="_blank">
-        Ver Perfil
-      </a>
-    </div>
-
-    <div class="social-card">
-      <h3>Instagram</h3>
-      <a href="https://instagram.com/kauaan.dev" target="_blank">
-        Ver Perfil
-      </a>
-    </div>
-
-    <div class="social-card">
-      <h3>LinkedIn</h3>
-      <a href="#" style="opacity:.5; pointer-events:none;">
-        Em breve
-      </a>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Kauan Rodrigues</h1>
+    <h2>Desenvolvedor Web Front-End</h2>
+    <p>Crio experiências digitais modernas, responsivas e estratégicas que ajudam negócios a crescer online.</p>
+    <div class="buttons">
+      <a href="#projetos" class="btn primary">Ver Projetos</a>
+      <a href="#contato" class="btn secondary">Solicitar Orçamento</a>
     </div>
   </div>
 </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Kauan. Todos os direitos reservados.
-  </footer>
+<section id="sobre" class="section reveal">
+  <h2>Sobre Mim</h2>
+  <p>
+    Desenvolvedor focado em criar interfaces modernas, organizadas e com alto impacto visual.
+    Trabalho com HTML, CSS e JavaScript desenvolvendo soluções que unem design, performance e estratégia.
+  </p>
+</section>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+<section id="projetos" class="section reveal">
+  <h2>Projetos</h2>
 
+  <div class="cards">
+
+    <div class="card">
+      <h3>Smartwatch Concept</h3>
+      <p>Página comparativa moderna para apresentação estratégica de produto.</p>
+      <div class="card-buttons">
+        <a href="#">Ver Projeto</a>
+        <a href="#">Código</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Sistema Web - Lanchonete</h3>
+      <p>Aplicação com carrinho, finalização de pedidos e controle automático de funcionamento.</p>
+      <div class="card-buttons">
+        <a href="#">Ver Projeto</a>
+        <a href="#">Código</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="servicos" class="section reveal">
+  <h2>Serviços</h2>
+  <ul>
+    <li>Landing Pages estratégicas</li>
+    <li>Sites institucionais</li>
+    <li>Portfólios profissionais</li>
+    <li>Estrutura para e-commerce</li>
+    <li>Sistemas web personalizados</li>
+  </ul>
+</section>
+
+<section id="contato" class="section reveal">
+  <h2>Vamos criar algo profissional?</h2>
+  <p>Seu negócio merece uma presença digital moderna.</p>
+  <a href="#" class="btn primary large">Falar no WhatsApp</a>
+</section>
+
+<footer>
+  <p>© 2026 Kauan Rodrigues - Desenvolvedor Web</p>
+</footer>
+
+<a href="#" class="whatsapp">💬</a>
+
+<script src="script.js"></script>
 </body>
 </html>
