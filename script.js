@@ -1,23 +1,13 @@
-gsap.registerPlugin(ScrollTrigger);
+const reveals = document.querySelectorAll(".reveal");
 
-// HERO animation
-gsap.from(".hero-content", {
-  opacity: 0,
-  y: 80,
-  duration: 1.5,
-  ease: "power3.out"
-});
+window.addEventListener("scroll", () => {
+  reveals.forEach(section => {
+    const windowHeight = window.innerHeight;
+    const revealTop = section.getBoundingClientRect().top;
+    const revealPoint = 100;
 
-// SCROLL REVEAL animation
-gsap.utils.toArray(".reveal").forEach((el) => {
-  gsap.to(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "top 85%"
-    },
-    opacity: 1,
-    y: 0,
-    duration: 1.2,
-    ease: "power3.out"
+    if(revealTop < windowHeight - revealPoint){
+      section.classList.add("active");
+    }
   });
 });
